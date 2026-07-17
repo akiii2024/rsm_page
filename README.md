@@ -13,3 +13,9 @@ npm run build
 ```
 
 アプリ本体とは独立した紹介サイトで、画面キャプチャにはデモデータを使用しています。
+
+## GitHub Pages
+
+`main` ブランチへのpushを検知すると、GitHub Actionsが静的サイトを生成し、GitHub Pagesへ公開します。
+
+公開URL: <https://akiii2024.github.io/rsm_page/>

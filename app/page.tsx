@@ -2,6 +2,8 @@ const pwaUrl = "https://akiii2024.github.io/RC_Setting_Manager/";
 const githubUrl = "https://github.com/akiii2024/RC_Setting_Manager";
 const releasesUrl = "https://github.com/akiii2024/RC_Setting_Manager/releases";
 
+export const dynamic = "force-static";
+
 const features = [
   {
     number: "01",
@@ -44,25 +46,25 @@ const features = [
 
 const screens = [
   {
-    src: "/screens/home-dashboard.png",
+    src: "./screens/home-dashboard.png",
     title: "ホーム",
     copy: "マシンと直近のセッティングへ、ピットからすばやくアクセス。",
     alt: "RC Setting Managerのホーム画面。登録マシンと最近のセッティングを表示",
   },
   {
-    src: "/screens/setting-editor.png",
+    src: "./screens/setting-editor.png",
     title: "セッティング編集",
     copy: "項目を車種別に整理し、よく使う値から効率よく編集。",
     alt: "TRF421Xのセッティング編集画面。表示モードとカテゴリタブを表示",
   },
   {
-    src: "/screens/history-statistics.png",
+    src: "./screens/history-statistics.png",
     title: "履歴・統計",
     copy: "ベストラップと走行履歴を並べて、変化を数字で確認。",
     alt: "RC Setting Managerの統計画面。走行ログとベストラップを表示",
   },
   {
-    src: "/screens/ai-advisor.png",
+    src: "./screens/ai-advisor.png",
     title: "AIアドバイザー",
     copy: "症状の診断から変更候補、テストプランまで見通せます。",
     alt: "AIセッティングアドバイザーのデモ結果。診断、変更候補、テストプランを表示",
@@ -78,7 +80,7 @@ export default function Home() {
     <>
       <header className="site-header">
         <a className="brand" href="#top" aria-label="RC Setting Manager トップへ">
-          <img src="/app-icon.png" alt="" width="40" height="40" />
+          <img src="./app-icon.png" alt="" width="40" height="40" />
           <span>
             <strong>RC SETTING</strong>
             <small>MANAGER</small>
@@ -125,11 +127,11 @@ export default function Home() {
             </div>
             <div className="phone phone-main">
               <div className="phone-bar"><i /><span>RSM / HOME</span><i /></div>
-              <img src="/screens/home-dashboard.png" alt="RC Setting Managerのホーム画面" width="430" height="932" />
+              <img src="./screens/home-dashboard.png" alt="RC Setting Managerのホーム画面" width="430" height="932" />
             </div>
             <div className="phone phone-back">
               <div className="phone-bar"><i /><span>RUN / STATS</span><i /></div>
-              <img src="/screens/history-statistics.png" alt="RC Setting Managerの履歴・統計画面" width="430" height="932" />
+              <img src="./screens/history-statistics.png" alt="RC Setting Managerの履歴・統計画面" width="430" height="932" />
             </div>
             <div className="telemetry telemetry-bottom">
               <span>TRACK TEMP</span><b>31.2<small>°C</small></b><i>+1.8</i>
@@ -259,7 +261,7 @@ export default function Home() {
 
         <section className="final-cta" aria-labelledby="final-title">
           <div className="final-line" aria-hidden="true">READY / SET / RUN</div>
-          <img src="/app-icon.png" alt="" width="80" height="80" />
+          <img src="./app-icon.png" alt="" width="80" height="80" />
           <h2 id="final-title">次の1周を、<br />もっと確かなものに。</h2>
           <a className="button button-primary" href={pwaUrl} target="_blank" rel="noopener noreferrer">Web版を試す <Arrow /></a>
         </section>
@@ -267,7 +269,7 @@ export default function Home() {
 
       <footer>
         <div className="footer-brand">
-          <img src="/app-icon.png" alt="" width="48" height="48" />
+          <img src="./app-icon.png" alt="" width="48" height="48" />
           <div><strong>RC SETTING MANAGER</strong><small>RECORD. COMPARE. IMPROVE.</small></div>
         </div>
         <div className="footer-links">

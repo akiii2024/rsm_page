@@ -10,6 +10,12 @@ const { d1, r2 } = hostingConfig;
 
 // macOS Seatbelt blocks FSEvents, so Codex previews need polling for HMR.
 const isCodexSeatbeltSandbox = process.env.CODEX_SANDBOX === "seatbelt";
+const repositoryName = process.env.GITHUB_REPOSITORY?.split("/")[1] ?? "";
+const isGitHubPagesBuild = process.env.GITHUB_ACTIONS === "true";
+const githubPagesBase =
+  isGitHubPagesBuild && repositoryName && !repositoryName.endsWith(".github.io")
+    ? `/${repositoryName}/`
+    : "/";
 
 const localBindingConfig = {
   main: "./worker/index.ts",
@@ -44,6 +50,7 @@ export default defineConfig(async () => {
   const { cloudflare } = await import("@cloudflare/vite-plugin");
 
   return {
+    base: githubPagesBase,
     server: isCodexSeatbeltSandbox
       ? { watch: { useFsEvents: false, usePolling: true } }
       : undefined,
